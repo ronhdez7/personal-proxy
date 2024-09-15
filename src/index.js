@@ -4,6 +4,10 @@ const proxy = require("express-http-proxy");
 
 const PORT = process.env.PORT;
 
+app.get("/hello", (req, res) => {
+	res.send("Hello World!");
+})
+
 app.use(
   proxy((req) => {
     const hostname = req.hostname;
