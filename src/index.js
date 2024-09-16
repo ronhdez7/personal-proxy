@@ -8,7 +8,13 @@ const server = http.createServer(async (req, res) => {
   try {
     console.log("HIT -", req.method, req.url);
 
-    const url = new URL(req.url, `http://localhost:${PORT}`);
+    if (req.url === "/") {
+      res.writeHead(200);
+      res.end();
+      return;
+    }
+
+    const url = new URL(req.url);
 
     if (req.method.toUpperCase() === "GET" && url.pathname === "/hello") {
       res.writeHead(200, { "Content-Type": "text/plain" });
