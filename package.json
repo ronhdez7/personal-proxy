@@ -9,10 +9,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.21.0",
-    "express-http-proxy": "^2.1.1"
-  }
+  "license": "ISC"
 }
